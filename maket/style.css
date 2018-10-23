@@ -1,0 +1,104 @@
+body {
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #6c6c6c;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+}
+
+.cart p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #6c6c6c;
+    margin-left: 5px;
+}
+
+.icon {
+    color: #6c6c6c;
+    font-size: 20px;
+}
+
+.nav ul {
+    display: inline-block;
+    list-style: none;
+}
+
+.nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    border-bottom: 1px solid #6c6c6c;
+}
+
+.nav li a {
+    text-decoration: none;
+    width: 100%;
+    line-height: 40px;
+    color: #6c6c6c;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav ul li.active {
+    border-bottom: 1px solid coral;
+
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.card {
+    border: 1px solid gainsboro;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 5px;
+}
+
+.card > img {
+    width: 200px;
+}
+
+.card a {
+    display: inline-block;
+    background-color: black;
+    width: 100px;
+    height: 30px;
+    text-decoration: none;
+    border-radius: 23px;
+    line-height: 30px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.price {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.currency, .cost {
+    font-weight: bold;
+    padding: 5px;
+
+
+}
