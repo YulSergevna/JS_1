@@ -18,8 +18,9 @@
             <div class="icon">
                 <i class="fas fa-shopping-cart"></i>
             </div>
-            <p>0 товаров, 0.00 руб.</p>
+            <p><span id="cart_count">0</span> товар(ов), <span id="cart_cost">0.00</span> руб.</p>
         </div>
+        <div class="cart_list"></div>
         <div class="nav">
             <ul>
                 <li class="active"><a href="#">All</a></li>
@@ -34,10 +35,11 @@
             <div class="card">
                 <img src="img/trend1.jpg" alt="">
                 <h2>Хемнэс</h2>
+                <span class="code" style="display: none;">0001</span>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos culpa labore laudantium deleniti assumenda alias, tenetur eligendi nihil modi quisquam?</p>
                 <buttoms>
-                    <a href="#">To cart</a>
-                    <a href="#">More</a>
+                    <a class="buy" href="#">Купить</a>
+                    <a href="#">Подробнее</a>
                 </buttoms>
                 <div class="price">
                     <div class="currency">RUB</div>
@@ -47,10 +49,11 @@
             <div class="card">
                 <img src="img/trend2.jpg" alt="">
                 <h2>Вимле</h2>
+                <span class="code" style="display: none;">0002</span>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos culpa labore laudantium deleniti assumenda alias, tenetur eligendi nihil modi quisquam?</p>
                 <buttoms>
-                    <a href="#">To cart</a>
-                    <a href="#">More</a>
+                    <a class="buy" href="#">Купить</a>
+                    <a href="#">Подробнее</a>
                 </buttoms>
                 <div class="price">
                     <div class="currency">RUB</div>
@@ -60,10 +63,11 @@
             <div class="card">
                 <img src="img/trend3.jpg" alt="">
                 <h2>Клиппан</h2>
+                <span class="code" style="display: none;">0003</span>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos culpa labore laudantium deleniti assumenda alias, tenetur eligendi nihil modi quisquam?</p>
                 <buttoms>
-                    <a href="#">To cart</a>
-                    <a href="#">More</a>
+                    <a class="buy" href="#">Купить</a>
+                    <a href="#">Подробнее</a>
                 </buttoms>
                 <div class="price">
                     <div class="currency">RUB</div>
@@ -73,10 +77,11 @@
             <div class="card">
                 <img src="img/trend4.jpg" alt="">
                 <h2>Мардаль</h2>
+                <span class="code" style="display: none;">0004</span>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos culpa labore laudantium deleniti assumenda alias, tenetur eligendi nihil modi quisquam?</p>
                 <buttoms>
-                    <a href="#">To cart</a>
-                    <a href="#">More</a>
+                    <a class="buy" href="#">Купить</a>
+                    <a href="#">Подробнее</a>
                 </buttoms>
                 <div class="price">
                     <div class="currency">RUB</div>
@@ -86,10 +91,11 @@
             <div class="card">
                 <img src="img/trend5.jpg" alt="">
                 <h2>Юстад</h2>
+                <span class="code" style="display: none;">0005</span>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos culpa labore laudantium deleniti assumenda alias, tenetur eligendi nihil modi quisquam?</p>
                 <buttoms>
-                    <a href="#">To cart</a>
-                    <a href="#">More</a>
+                    <a class="buy" href="#">Купить</a>
+                    <a href="#">Подробнее</a>
                 </buttoms>
                 <div class="price">
                     <div class="currency">RUB</div>
@@ -99,10 +105,11 @@
             <div class="card">
                 <img src="img/trend6.jpg" alt="">
                 <h2>Лёвос</h2>
+                <span class="code" style="display: none;">0006</span>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos culpa labore laudantium deleniti assumenda alias, tenetur eligendi nihil modi quisquam?</p>
                 <buttoms>
-                    <a href="#">To cart</a>
-                    <a href="#">More</a>
+                    <a class="buy" href="#">Купить</a>
+                    <a href="#">Подробнее</a>
                 </buttoms>
                 <div class="price">
                     <div class="currency">RUB</div>
@@ -113,6 +120,7 @@
 
     </div>
 
-<script src="js.js"></script>
+    <script src="js.js"></script>
+    <script src="cart.js"></script>
 </body>
 </html>

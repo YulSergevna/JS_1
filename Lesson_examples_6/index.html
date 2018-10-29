@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Базовый курс JavaScript. Урок 6</title>
+		<style>
+			.slider_pics img {
+				width: 20%;
+				height: auto;
+				cursor: pointer;
+			}
+
+            .wrap {
+                display: flex;
+                align-items: center;
+            }
+
+            .left {
+                margin-right: 20px;
+            }
+
+            .right {
+                margin-left: 20px;
+            }
+
+            .left svg:hover, .right svg:hover {
+                fill: rgba(153, 134, 117);
+                cursor: pointer;
+            }
+		</style>
+	</head>
+	<body style="text-align:center; max-width: 509px; margin: 0 auto; padding: 0 25px;">
+    <div class="wrap">
+        <div class="left slider_arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="73px" viewBox="0 0 40 73">
+                <path fillRule="evenodd" d="M 38.03 72.98C 38.03 72.98 0 36.5 0 36.5 0 36.5 38.03 0.02 38.03 0.02 38.03 0.02 40 2.02 40 2.02 40 2.02 4.07 36.5 4.07 36.5 4.07 36.5 40 70.98 40 70.98 40 70.98 38.03 72.98 38.03 72.98Z"/>
+            </svg>
+        </div>
+        <div class="slider_text">
+            <p><img src="img/jslogo.jpg" style="width:100%; height:auto;" id="big_picture" /></p>
+        </div>
+        <div class="right slider_arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="73px" viewBox="0 0 40 73">
+                <path fillRule="evenodd" d="M 1.97 72.98C 1.97 72.98 40 36.5 40 36.5 40 36.5 1.97 0.02 1.97 0.02 1.97 0.02 0 2.02 0 2.02 0 2.02 35.93 36.5 35.93 36.5 35.93 36.5 0 70.98 0 70.98 0 70.98 1.97 72.98 1.97 72.98Z"/></svg>
+        </div>
+    </div>
+
+		<div class="slider_pics">
+			<img src="img/jslogo.jpg">
+			<img src="img/jslogo2.png">
+            <img src="img/jslogo6.png">
+			<img src="img/jslogo3.png">
+			<img src="img/jslogo4.png">
+			<img src="img/jslogo5.png">
+		</div>
+		<p onclick="alert('Clicked'); console.log('test');">Событие клик внутри html 1 вариант</p>
+		<p class="willBeClicked">Событие клик внутри html 2 вариант</p>
+		<p class="testInClick">Переопределение события onclick для willBeClicked</p>
+		<p class="btext btext2">Язык JavaScript является основным языком программирования в сети Интернет. Перво-наперво он позволяет расширять стандартное поведение пользователя в веб-страницах. Вместо сухих статичных страниц, которые просто <a href="http://yandex.ru">показываются</a> пользователю <em>друг за другом</em>, с JavaScript <b>страница будет</b> взаимодействовать с пользователями, откликаться на его действия, получать и применять данные из Интернет и делать многое другое. </p>
+		<ul style="text-align:left;">
+			<li>Элемент 1</li>
+			<li>Элемент 2</li>
+			<li>Элемент 3</li>
+		</ul>
+		<div id="ForAppend"></div>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>
