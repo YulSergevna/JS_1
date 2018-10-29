@@ -99,6 +99,21 @@ h1 {
 .currency, .cost {
     font-weight: bold;
     padding: 5px;
+}
 
+.product_list {
+    display: flex;
+}
 
+.list_num, .list_name, .list_cost {
+    margin-right: 20px;
+}
+
+.list_del {
+    color: red;
+}
+
+.list_del:hover {
+    cursor: pointer;
+    color: darkred;
 }

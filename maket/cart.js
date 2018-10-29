@@ -36,9 +36,71 @@ function Cart() {
 }
 
 let myCart = new Cart();
-console.log(myCart);
 
-myCart.add(new Product('Лампа', 100, 'l001', 1));
-myCart.add(new Product('Ковер', 1500, 'k001', 1));
-myCart.add(new Product('Тумбочка', 2300, 't001', 1));
-console.log(myCart.price());
+//Навешиваем событие на все кнопки "Купить"
+let buy = document.querySelectorAll(".buy");
+for (let i = 0; i < buy.length; i += 1) {
+    buy[i].addEventListener("click", function () {
+        let el = buy[i]; // конкретная кнопка
+        while (el.classList.contains('card') == false) {
+            el = el.parentNode; // ищем родительскую карточку
+        }
+        // В родительской карточке получаем все параметры
+        let code = el.getElementsByClassName("code");
+        let name = el.getElementsByTagName("h2");
+        let cost = el.getElementsByClassName("cost");
+        //Создаем новый продукт с найденными параметрами
+        let P = new Product(name[0].innerHTML, +cost[0].innerHTML, code[0].innerHTML, 1);
+        //Добавляем новый продукт в корзину
+        myCart.add(P);
+        //Обновляем значение цена и количество в блоке "Корзина" на странице
+        document.getElementById("cart_count").innerHTML = myCart.products.length;
+        document.getElementById("cart_cost").innerHTML = myCart.price();
+        //Добавляем продукт в список продуктов в блоке "корзина" на странице
+        //Создаем лист с продуктами
+        let cart = document.getElementsByClassName("cart_list")[0];
+        let div = document.createElement("div");
+        div.className = "product_list";
+
+        //Порядковый номер продукта
+        let list_num = document.createElement("div");
+        list_num.className = "list_num";
+        list_num.innerHTML = myCart.products.length;
+        div.append(list_num);
+
+        //Имя продукта
+        let list_name = document.createElement("div");
+        list_name.className = "list_name";
+        list_name.innerHTML = P.name;
+        div.append(list_name);
+
+        //Стоимость продукта
+        let list_cost = document.createElement("div");
+        list_cost.className = "list_cost";
+        div.append(list_cost);
+        list_cost.innerHTML = P.price;
+
+        //Кнопка удалить
+        let list_del = document.createElement("div");
+        list_del.className = "list_del";
+        list_del.innerHTML = "удалить";
+        //Устанавливаем событие для кнопки удалить
+        list_del.addEventListener("click", function () {
+            let del = this.parentNode;
+            del.getElementsByClassName("list_num")[0].innerHTML;
+            //Удаляем ПРОДУКТ из корзины по его порядковому номеру
+            myCart.products.splice(myCart.products.indexOf(+del.getElementsByClassName("list_num")[0].innerHTML - 1), 1);
+            //Полностью перерисовываем корзину, заного выводим весь список
+            //Обновляем стоимость и количество товаров в корзине на странице
+            document.getElementById("cart_count").innerHTML = myCart.products.length;
+            document.getElementById("cart_cost").innerHTML = myCart.price();
+            //Удаляем текущий элемент из списка на странице
+            del.remove();
+        });
+        div.append(list_del);
+        cart.append(div);
+    })
+}
+
+
+
